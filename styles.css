@@ -1,0 +1,184 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    min-height: 100vh;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #E0E8FF;
+}
+
+.container {
+        top: 50%;
+        left: 50%;
+        width: 450px;
+        height: 697px;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        position: fixed;
+        box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.151826);
+        border-radius: 20px;
+        overflow: hidden;
+}
+
+.container-text {
+    text-align: center;
+    padding: 48px;
+}
+
+.title {
+    color: #1F2E55;
+    margin-bottom: 17px;
+    font-weight: 900;
+    font-size: 28px;
+}
+
+.subtitle {
+    color: #717FA6;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.plan-box {
+    width: 354px;
+    height: 98px;
+    background-color: #F7F9FF;
+    border-radius: 11px;
+    display: flex;
+    padding: 25px 24px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.plan-box-left {
+    display: flex;
+    align-items: center;
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: 900;
+    color: #1F2E55;
+    margin-left: 20px;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #717FA6;
+    margin-left: 20px;
+}
+
+a {
+    display: block;
+}
+
+.proceed-btn {
+    background-color: #382AE1;
+    box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+    border-radius: 11px;
+    text-decoration: none;
+    width: 354px;
+    height: 50px;
+    color: white;
+    font-weight: 900;
+    font-size: 15px;
+    padding: 15px 102px;
+    margin-bottom: 32px;
+}
+
+.proceed-btn:hover {
+    background-color: #766CF1;
+}
+
+.cancel-btn {
+    font-weight: 900;
+    font-size: 15px;
+    text-decoration: none;
+    color: #717FA6;
+}
+
+.cancel-btn:hover {
+    color: #1F2E55;
+}
+
+/* Mobile ↓ */
+
+@media only screen and (max-width: 425px) {
+    .container {
+        max-width: 87%;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .plan-box{
+        width: 279px;
+        padding: 16px;
+    }
+
+    .proceed-btn,
+    .cancel-btn {
+        width: 279px;
+        font-size: 15px;
+    }
+}
